@@ -156,7 +156,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
             const x = offset * gap;
             const y =
               -Math.pow(offset, 2) * (arcHeight / Math.pow(centerIndex, 2));
-            const rotate = offset * 10;
+            const rotate = offset * 20;
 
             const isActive = index === activeIndex;
 
