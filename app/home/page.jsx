@@ -1,0 +1,22 @@
+import React from 'react'
+import HeaderPage from '../_components/header/Header'
+import AboutTitle from '../_components/Home/AboutUs'
+import Footer from '../_components/footer/Footer'
+import CustomSlider from '../_components/Home/Slider'
+import SemiCircleImages from '../_components/Home/SemiCircleImages'
+
+function page() {
+  return (
+    <>
+    <HeaderPage />
+     <div className=' mx-16'><AboutTitle /></div> 
+
+       {/* <div className='w-full bg-red-600'><CustomSlider /></div>
+     */}
+     <div className='w-full bg-red-600'><SemiCircleImages /></div>
+    <Footer />
+    </>
+  )
+}
+
+export default page
