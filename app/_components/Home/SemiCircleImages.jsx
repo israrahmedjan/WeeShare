@@ -4,30 +4,34 @@ import { useState, useEffect } from "react";
 
 export default function LightArcImages() {
   const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
-  const image1 = process.env.NEXT_PUBLIC_FRONT_DOMAIN + "/images/11.png";
   const NextUrl = domain + "/images/Next.png";
   const PrevUrl = domain + "/images/prev.png";
+  const image0 = domain + "/images/0.png";
+  const image1 = domain + "/images/1.png";
   const image2 = domain + "/images/2.png";
   const image3 = domain + "/images/3.png";
+   const image4 = domain + "/images/4.png";
+    const image5 = domain + "/images/5.png";
+    const image6 = domain + "/images/6.png";
 
 
  const images = [
-    {
-      image: image1,
-      title: `1 - Message from the Captain of the Starship`,
-      description1:
-      `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
-	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
-      description2:
-      `Thank you for considering SMB DigitalZone for your digital odyssey.
-We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
-      description3:
-      `Contact us today to learn more about our services and how we can help you reach your objectives.
-Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
-    },
+//     {
+//       image: image0,
+//       title: `1 - Message from the Captain of the Starship`,
+//       description1:
+//       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+// 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+//       description2:
+//       `Thank you for considering SMB DigitalZone for your digital odyssey.
+// We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+//       description3:
+//       `Contact us today to learn more about our services and how we can help you reach your objectives.
+// Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
+//     },
     
    {
-      image: image2,
+      image: image1,
       title: `2 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
@@ -40,7 +44,7 @@ We're thrilled to embark on this cosmic journey with you and guide your business
 Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
     },
  {
-      image: image3,
+      image: image2,
       title: `3 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
@@ -53,7 +57,7 @@ We're thrilled to embark on this cosmic journey with you and guide your business
 Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
     },
  {
-      image: image1,
+      image: image3,
       title: `4 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
@@ -66,7 +70,7 @@ We're thrilled to embark on this cosmic journey with you and guide your business
 Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
     },
      {
-      image: image1,
+      image: image4,
       title: `5 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
@@ -78,21 +82,21 @@ We're thrilled to embark on this cosmic journey with you and guide your business
       `Contact us today to learn more about our services and how we can help you reach your objectives.
 Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
     },
-//      {
-//       image: image1,
-//       title: `Message from the Captain of the Starship`,
-//       description1:
-//       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
-// 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
-//       description2:
-//       `Thank you for considering SMB DigitalZone for your digital odyssey.
-// We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
-//       description3:
-//       `Contact us today to learn more about our services and how we can help you reach your objectives.
-// Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
-//     },
+     {
+      image: image5,
+      title: `Message from the Captain of the Starship`,
+      description1:
+      `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+      description2:
+      `Thank you for considering SMB DigitalZone for your digital odyssey.
+We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+      description3:
+      `Contact us today to learn more about our services and how we can help you reach your objectives.
+Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
+    },
 //          {
-//       image: image1,
+//       image: image6,
 //       title: `Message from the Captain of the Starship`,
 //       description1:
 //       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
@@ -110,7 +114,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
 
 
   const imageSize = 180
-  const gap = 250;
+  const gap = 200;
   const arcHeight = -150;
   const [activeIndex, setActiveIndex] = useState(Math.floor(images.length / 2));
   const [animate, setAnimate] = useState(false);
@@ -156,7 +160,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
             const x = offset * gap;
             const y =
               -Math.pow(offset, 2) * (arcHeight / Math.pow(centerIndex, 2));
-            const rotate = offset * 20;
+            const rotate = offset * 10;
 
             const isActive = index === activeIndex;
 
@@ -164,7 +168,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
               <div
                 key={index}
                 className={`absolute transition-all duration-300 cursor-pointer z-50 ${
-                  isActive ? "z-50 scale-[1.05]" : "scale-100"
+                  isActive ? "z-50 scale-[1]" : "scale-100"
                 }`}
                 style={{
                   left: `50%`,
