@@ -16,21 +16,22 @@ const imageDate = `${domain}/images/date.jpg`;
     <>
   
 {/* //   Large About Us text Div */}
- <h1
-  className="text-[100px] mx-0 px-0 lg:text-[407px] text-transparent bg-clip-text bg-center bg-cover pointer-events-none"
-  style={{
-    fontFamily: 'Bebas Neue, sans-serif',
-    letterSpacing: '1px',
-    backgroundImage: `
-      linear-gradient(rgba(5, 55, 174, 0.7), rgba(5, 55, 174, 0.7)),
-      url(${imageURL})
-    `,
-    backgroundSize: '300px 300px',
-  }}
->
-  ABOUT US
-</h1>
-
+    <div className="flex justify-center items-center  md:h-[410px] bg-white mt-0 p-0 overflow-hidden">
+      <h1
+        className="text-[100px] mx-0 px-0 lg:text-[417px] text-transparent bg-clip-text bg-center bg-cover"
+        style={{
+          fontFamily: 'Bebas Neue, sans-serif',
+           letterSpacing: '1px',
+          backgroundImage: `
+            linear-gradient(rgba(5, 55, 174, 0.7), rgba(5, 55, 174, 0.7)),
+            url(${imageURL})
+          `,
+          backgroundSize: '300px 300px',
+        }}
+      >
+        ABOUT US
+      </h1>
+    </div>
 
 {/* About us text area */}
    <div className="flex justify-between flex-col md:flex-row gap-5"
