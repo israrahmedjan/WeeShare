@@ -14,7 +14,7 @@ export default function LightArcImages() {
  const images = [
     {
       image: image1,
-      title: `Message from the Captain of the Starship`,
+      title: `1 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
@@ -28,7 +28,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
     
    {
       image: image2,
-      title: `Message from the Captain of the Starship`,
+      title: `2 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
@@ -41,7 +41,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
     },
  {
       image: image3,
-      title: `Message from the Captain of the Starship`,
+      title: `3 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
@@ -54,7 +54,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
     },
  {
       image: image1,
-      title: `Message from the Captain of the Starship`,
+      title: `4 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
@@ -67,7 +67,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
     },
      {
       image: image1,
-      title: `Message from the Captain of the Starship`,
+      title: `5 - Message from the Captain of the Starship`,
       description1:
       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
