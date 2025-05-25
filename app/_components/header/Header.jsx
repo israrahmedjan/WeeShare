@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 function HeaderPage() {
     const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
+    const logoURL = domain + "/images/logo.png";
    const [openDropdown, setOpenDropdown] = useState({
     services: false,
     services2: false,
@@ -44,7 +45,7 @@ function HeaderPage() {
 </div>
   <div className="w-full px-16  bg-[#FCFCFC] font-semibold text-[#000000] text-base">
       <nav className="flex space-x-8 md:text-[14px] items-center relative h-[40px]">
-        <a href="#">Home</a>
+        <a href="#">Home{logoURL}</a>
         
         {/* About Us Dropdown */}
         <div
