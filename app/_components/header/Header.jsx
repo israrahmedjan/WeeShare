@@ -45,7 +45,7 @@ function HeaderPage() {
 </div>
   <div className="w-full px-16  bg-[#FCFCFC] font-semibold text-[#000000] text-base">
       <nav className="flex space-x-8 md:text-[14px] items-center relative h-[40px]">
-        <a href="#">Home{logoURL}</a>
+        <a href="#">Home</a>
         
         {/* About Us Dropdown */}
         <div
