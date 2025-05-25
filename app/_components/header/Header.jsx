@@ -37,7 +37,7 @@ function HeaderPage() {
   <div className="flex justify-between items-center h-[100px] mb-0">
     <div className="relative w-[200px] h-[100px]"> {/* adjust as needed */}
   <Image
-    src={`${domain}/images/logo.png`}
+    src={`${logoURL}`}
     alt="logo image"
     fill
     className="object-contain"
