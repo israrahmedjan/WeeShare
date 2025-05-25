@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function LightArcImages() {
   const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
-  const image1 = process.env.NEXT_PUBLIC_FRONT_DOMAIN + "/images/1.png";
+  const image1 = process.env.NEXT_PUBLIC_FRONT_DOMAIN + "/images/11.png";
   const NextUrl = domain + "/images/next.png";
   const PrevUrl = domain + "/images/prev.png";
   const image2 = domain + "/images/2.png";
