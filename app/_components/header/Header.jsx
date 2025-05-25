@@ -30,9 +30,9 @@ function HeaderPage() {
   return (
     <>
     {/* Header for large devices and medium devics */}
-    <div className='text-white  hidden md:block '>
+    <div className='text-white  hidden md:block mx-1 '>
 
-       <div className="w-full px-16 bg-[#FCFCFC] ">
+       <div className="w-full bg-white ">
   {/* Top Bar: Logo Left, Text Right */}
   <div className="flex justify-between items-center h-[100px] mb-0">
     <div className="relative w-[200px] h-[100px]"> {/* adjust as needed */}
@@ -43,17 +43,17 @@ function HeaderPage() {
     className="object-contain"
   />
 </div>
-  <div className="w-full px-16  bg-[#FCFCFC] font-semibold text-[#000000] text-base">
+  <div className="w-full px-16  bg-white font-semibold text-[#000000] text-base">
       <nav className="flex space-x-8 md:text-[14px] items-center relative h-[40px]">
         <a href="#">Home</a>
         
         {/* About Us Dropdown */}
         <div
-          className="relative"
+          className="relative "
           onMouseOver={() => handleDropdown('services2', true)}
           onMouseLeave={() => handleDropdown('services2', false)}
         >
-          <button className="flex items-center space-x-1">
+          <button className="flex items-center space-x-1 cursor-pointer">
             <span>About Us</span>
             <ChevronDown size={16} />
           </button>
@@ -80,7 +80,7 @@ function HeaderPage() {
           onMouseOver={() => handleDropdown('services', true)}
           onMouseLeave={() => handleDropdown('services', false)}
         >
-          <button className="flex items-center space-x-1">
+          <button className="flex items-center space-x-1 cursor-pointer">
             <span>Services</span>
             <ChevronDown size={16} />
           </button>
@@ -113,7 +113,7 @@ function HeaderPage() {
           onMouseOver={() => handleDropdown('services3', true)}
           onMouseLeave={() => handleDropdown('services3', false)}
         >
-          <button className="flex items-center space-x-1">
+          <button className="flex items-center space-x-1 cursor-pointer">
             <span>Careers</span>
             <ChevronDown size={16} />
           </button>

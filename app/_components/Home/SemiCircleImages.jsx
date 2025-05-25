@@ -207,7 +207,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
                 : "opacity-0 translate-y-6"
             }`}
           >
-            <h3 className="text-[27px] w-[100%] mx-auto font-bold mb-2 ">{images[activeIndex].title}</h3>
+            <h3 className="text-[27px] w-[100%] mx-auto font-semibold mb-5 ">{images[activeIndex].title}</h3>
            <div className="text-[16px] flex flex-col gap-4"> <p>{images[activeIndex].description1}</p>
             <p>{images[activeIndex].description2}</p>
             <p>{images[activeIndex].description3}</p>

@@ -16,9 +16,9 @@ const imageDate = `${domain}/images/date.jpg`;
     <>
   
 {/* //   Large About Us text Div */}
-    <div className="flex justify-center items-center h-[100px]  md:h-[390px] bg-white m-0 p-0">
+    <div className="flex justify-center items-center h-[100px]  md:h-[410px] bg-white m-0 p-0">
       <h1
-        className="text-[50px] md:text-[380px] text-transparent bg-clip-text bg-center bg-cover m-0 p-0"
+        className="text-[100px] mx-0 px-0 lg:text-[407px] text-transparent bg-clip-text bg-center bg-cover m-0 p-0"
         style={{
           fontFamily: 'Bebas Neue, sans-serif',
           letterSpacing: '1px',
@@ -44,7 +44,7 @@ const imageDate = `${domain}/images/date.jpg`;
   
   
   }}>
-    <h1 className="text-[25px] font-bold md:text-[48px] text-black">
+    <h1 className="text-[25px] font-bold md:text-[48px] text-black mx-4">
         Welcome to <span className='text-[#FFA500]'>SMB DigitalZone,</span>
 </h1>
 <div className="flex text-black flex-col md:flex-row">

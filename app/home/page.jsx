@@ -8,8 +8,8 @@ import SemiCircleImages from '../_components/Home/SemiCircleImages'
 function page() {
   return (
     <>
-    <HeaderPage />
-     <div className=' mx-16'><AboutTitle /></div> 
+   <div className='mx-16'> <HeaderPage /></div>
+     <div className='mx-16'><AboutTitle /></div> 
 
        {/* <div className='w-full bg-red-600'><CustomSlider /></div>
      */}
