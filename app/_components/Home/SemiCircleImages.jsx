@@ -3,50 +3,115 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function LightArcImages() {
+  const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
   const image1 = process.env.NEXT_PUBLIC_FRONT_DOMAIN + "/images/1.png";
+  const NextUrl = domain + "/images/next.png";
+  const PrevUrl = domain + "/images/prev.png";
+  const image2 = domain + "/images/2.png";
+  const image3 = domain + "/images/3.png";
 
-  const images = [
+
+ const images = [
     {
       image: image1,
-      title: "Message from the Captain of the Starship",
-      description:
-        "Led by our visionary founder Simo Berrada with over 25 years of cosmic experience in",
+      title: `Message from the Captain of the Starship`,
+      description1:
+      `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+      description2:
+      `Thank you for considering SMB DigitalZone for your digital odyssey.
+We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+      description3:
+      `Contact us today to learn more about our services and how we can help you reach your objectives.
+Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
     },
-    {
+    
+   {
+      image: image2,
+      title: `Message from the Captain of the Starship`,
+      description1:
+      `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+      description2:
+      `Thank you for considering SMB DigitalZone for your digital odyssey.
+We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+      description3:
+      `Contact us today to learn more about our services and how we can help you reach your objectives.
+Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
+    },
+ {
+      image: image3,
+      title: `Message from the Captain of the Starship`,
+      description1:
+      `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+      description2:
+      `Thank you for considering SMB DigitalZone for your digital odyssey.
+We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+      description3:
+      `Contact us today to learn more about our services and how we can help you reach your objectives.
+Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
+    },
+ {
       image: image1,
-      title: "Message 2",
-      description: "Message 2 Description",
+      title: `Message from the Captain of the Starship`,
+      description1:
+      `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+      description2:
+      `Thank you for considering SMB DigitalZone for your digital odyssey.
+We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+      description3:
+      `Contact us today to learn more about our services and how we can help you reach your objectives.
+Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
     },
-    {
+     {
       image: image1,
-      title: "Message 3",
-      description: "Message 3 Description",
+      title: `Message from the Captain of the Starship`,
+      description1:
+      `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+      description2:
+      `Thank you for considering SMB DigitalZone for your digital odyssey.
+We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+      description3:
+      `Contact us today to learn more about our services and how we can help you reach your objectives.
+Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
     },
-    {
-      image: image1,
-      title: "Message 4",
-      description: "Message 4 Description",
-    },
-    {
-      image: image1,
-      title: "Message 5",
-      description: "Message 5 Description",
-    },
-    {
-      image: image1,
-      title: "Message 6",
-      description: "Message 6 Description",
-    },
-    {
-      image: image1,
-      title: "Message 7",
-      description: "Message 7 Description",
-    },
+//      {
+//       image: image1,
+//       title: `Message from the Captain of the Starship`,
+//       description1:
+//       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+// 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+//       description2:
+//       `Thank you for considering SMB DigitalZone for your digital odyssey.
+// We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+//       description3:
+//       `Contact us today to learn more about our services and how we can help you reach your objectives.
+// Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
+//     },
+//          {
+//       image: image1,
+//       title: `Message from the Captain of the Starship`,
+//       description1:
+//       `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market, we're fueled by a 
+// 	  passion for innovation and driven by a singular mission: to help businesses like yours ascend to cosmic greatness.`,
+//       description2:
+//       `Thank you for considering SMB DigitalZone for your digital odyssey.
+// We're thrilled to embark on this cosmic journey with you and guide your business toward the stars.`,
+//       description3:
+//       `Contact us today to learn more about our services and how we can help you reach your objectives.
+// Unlock the full potential of your online presence with SMB DigitalZone, your cosmic companion in the digital universe.`,
+//     },
+ 
   ];
 
-  const imageSize = 150;
+
+
+  const imageSize = 180
   const gap = 250;
-  const arcHeight = -80;
+  const arcHeight = -150;
   const [activeIndex, setActiveIndex] = useState(Math.floor(images.length / 2));
   const [animate, setAnimate] = useState(false);
 
@@ -83,8 +148,7 @@ export default function LightArcImages() {
 
   return (
     <>
-      <div className="relative w-full h-[400px] flex items-center justify-center bg-[#0b1c3f] overflow-hidden">
-        <div className="relative" style={{ height: `${imageSize}px` }}>
+      <div className="relative w-full h-[500px] flex items-center justify-center bg-[#0F172A]">  <div className="relative" style={{ height: `${imageSize}px` }}>
           {images.map((src, index) => {
             const centerIndex = (images.length - 1) / 2;
 
@@ -99,8 +163,8 @@ export default function LightArcImages() {
             return (
               <div
                 key={index}
-                className={`absolute transition-all duration-300 cursor-pointer ${
-                  isActive ? "z-50 scale-[1.15]" : "scale-100"
+                className={`absolute transition-all duration-300 cursor-pointer z-50 ${
+                  isActive ? "z-50 scale-[1.05]" : "scale-100"
                 }`}
                 style={{
                   left: `50%`,
@@ -117,8 +181,8 @@ export default function LightArcImages() {
                   alt={`Image ${index}`}
                   width={212}
                   height={270}
-                  className={`rounded-lg border-4 shadow-xl transition-all duration-300 ${
-                    isActive ? "border-yellow-400" : "border-white"
+                  className={`rounded-xl border-2 shadow-md transition-all duration-300 ${
+                    isActive ? "border-[#FFA500]" : "border-none"
                   }`}
                 />
               </div>
@@ -128,29 +192,32 @@ export default function LightArcImages() {
       </div>
 
       {/* Content Area with slide up transition */}
-      <div className=" relative -top-20 w-full mt-4">
-        <div className="flex justify-center items-center gap-10 text-white">
+      <div className=" relative -top-2 w-full mt-4 ">
+        <div className="flex justify-center w-[100%] items-center gap-10 text-white">
           <button
             onClick={handlePrev}
-            className="px-4 py-2 bg-white text-black rounded"
+            className="py-2 bg-[#0F172A] w-[15%]  text-black rounded cursor-pointer flex justify-end "
           >
-            ←
+          <Image src={`${PrevUrl}`} width={60} height={60} alt="image" className="" />
           </button>
           <div
-            className={`text-center max-w-xl transition-all duration-300 ease-in-out ${
+            className={`text-center   w-[50%] transition-all duration-300 ease-in-out ${
               animate
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
             }`}
           >
-            <h3 className="text-xl font-bold mb-2">{images[activeIndex].title}</h3>
-            <p>{images[activeIndex].description}</p>
+            <h3 className="text-[27px] w-[100%] mx-auto font-bold mb-2 ">{images[activeIndex].title}</h3>
+           <div className="text-[16px] flex flex-col gap-4"> <p>{images[activeIndex].description1}</p>
+            <p>{images[activeIndex].description2}</p>
+            <p>{images[activeIndex].description3}</p>
+            </div>
           </div>
           <button
             onClick={handleNext}
-            className="px-4 py-2 bg-white text-black rounded"
+            className=" py-2 bg-[#0F172A] text-black rounded cursor-pointer w-[15%] flex justify-start "
           >
-            →
+          <Image src={`${NextUrl}`} width={60} height={60} alt="image" />
           </button>
         </div>
       </div>

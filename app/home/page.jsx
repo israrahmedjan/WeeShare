@@ -13,7 +13,7 @@ function page() {
 
        {/* <div className='w-full bg-red-600'><CustomSlider /></div>
      */}
-     <div className='w-full bg-red-600'><SemiCircleImages /></div>
+     <div className='w-full bg-[#0F172A] hidden md:block'><SemiCircleImages /></div>
     <Footer />
     </>
   )
