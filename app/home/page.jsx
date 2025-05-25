@@ -5,9 +5,12 @@ import Footer from '../_components/footer/Footer'
 import CustomSlider from '../_components/Home/Slider'
 import SemiCircleImages from '../_components/Home/SemiCircleImages'
 
-function page() {
+async function page() {
+
   return (
     <>
+
+   
    <div className='mx-16'> <HeaderPage /></div>
      <div className='mx-16'><AboutTitle /></div> 
 

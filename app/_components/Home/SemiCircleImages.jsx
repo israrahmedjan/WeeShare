@@ -152,7 +152,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
 
   return (
     <>
-      <div className="relative w-full h-[500px] flex items-center justify-center bg-[#0F172A]">  <div className="relative" style={{ height: `${imageSize}px` }}>
+      <div className="relative w-full h-[300px] flex items-center justify-center bg-[#0F172A]">  <div className="relative" style={{ height: `${imageSize}px` }}>
           {images.map((src, index) => {
             const centerIndex = (images.length - 1) / 2;
 
@@ -160,7 +160,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
             const x = offset * gap;
             const y =
               -Math.pow(offset, 2) * (arcHeight / Math.pow(centerIndex, 2));
-            const rotate = offset * 10;
+            const rotate = offset * 8;
 
             const isActive = index === activeIndex;
 
@@ -196,7 +196,7 @@ Unlock the full potential of your online presence with SMB DigitalZone, your cos
       </div>
 
       {/* Content Area with slide up transition */}
-      <div className=" relative -top-2 w-full mt-4 ">
+      <div className=" relative -top-2 w-full mt-16 ">
         <div className="flex justify-center w-[100%] items-center gap-10 text-white">
           <button
             onClick={handlePrev}

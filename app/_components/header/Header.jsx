@@ -1,13 +1,16 @@
 'use client'
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ChevronDown, ChevronRight,Menu, X  } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link';
+import LogoutButton from '@/app/logout/logout';
 
 
 function HeaderPage() {
     const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
     const logoURL = domain + "/images/logo.png";
+    const [istoken,setistoken] = useState(false);
    const [openDropdown, setOpenDropdown] = useState({
     services: false,
     services2: false,
@@ -26,11 +29,23 @@ function HeaderPage() {
   
   };
 
+   useEffect(() => {
+    const tokenExists = document.cookie
+      .split("; ")
+      .some((cookie) => cookie.startsWith("token"));
+      if(tokenExists)
+      {
+        console.log("Is exist",tokenExists);
+        setistoken(true);
+      }
+     
+    //setHasToken(tokenExists);
+  }, []);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
     {/* Header for large devices and medium devics */}
-    <div className='text-white  hidden md:block mx-1 '>
+    <div className='text-white  hidden md:block mx-1 z-50 '>
 
        <div className="w-full bg-white ">
   {/* Top Bar: Logo Left, Text Right */}
@@ -137,7 +152,11 @@ function HeaderPage() {
       </nav>
     </div>
  
-  <div className="text-base  flex items-center text-[#0537AE] md:w-[139px] gap-4"><button className='bg-[#0537AE] rounded-md text-white px-5 py-1'>LogOut</button></div>
+  <div className="text-base  flex items-center text-[#0537AE] md:w-[139px] gap-4">
+    
+    {istoken ? (<span><LogoutButton /></span>):(<Link className='bg-[#0537AE] rounded-md text-white px-5 py-1 cursor-pointer' href={`${domain}`}>Log In</Link>)}
+    
+    </div>
  
   </div>
 

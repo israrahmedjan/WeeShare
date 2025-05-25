@@ -16,8 +16,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 function Login() {
-  const [email, setEmail] = useState('israr@gmail.com');
-  const [password, setPassword] = useState('israr123');
+  const [email, setEmail] = useState('john@gmail.com');
+  const [password, setPassword] = useState('john123');
   const [response, setResponse] = useState('');
   const [client,setclient] = useState(false);
    const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
@@ -29,8 +29,8 @@ function Login() {
 
   const form = useForm({
     defaultValues: {
-      email: '',
-      password: '',
+      email: 'john@gmail.com',
+      password: 'john123',
     },
   });
 
@@ -89,7 +89,7 @@ if(!client) return null;
 <div className="relative">
   {loading && (
     <div className="absolute inset-0 flex items-center justify-center bg-opacity-40 z-10">
-      <span className="text-white text-xl opacity-90">Loading...</span>
+      <span className="text-white text-xl opacity-90">Please wait...</span>
     </div>
   )}
     <Form {...form}>
@@ -100,12 +100,15 @@ if(!client) return null;
   }`}
 >
          <h1 className='text-white text-base md:text-[27px] flex justify-center'>Welcome Back, 👋</h1>
+         <p className='text-white font-normal text-left'>
+Sign in to your dashboard & start tracking your analytics.
+         </p>
  {error && <p className="text-red-600 text-base italic flex justify-center items-center">The email or password you entered is incorrect. Please try again.</p>}        <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel className="text-white font-normal">Email</FormLabel>
               <FormControl>
                 <Input placeholder="Enter email" {...field}
                    onChange={(e) => {
@@ -125,7 +128,7 @@ if(!client) return null;
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel className="text-white font-normal">Password</FormLabel>
               <FormControl>
                 <Input type="password" placeholder="Enter password" {...field}
                    onChange={(e) => {

@@ -27,7 +27,10 @@ function OtpVerify() {
   const [loading,setloading] = useState(false)
 
   const [otp,setotp] = useState(true);
-   const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
+     const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
+    const bgImageBottom = domain + "/images/bg-gradiant-bottom.png";
+    const bgImageTop = domain + "/images/bg-gradient-top.png";
+
 
   
   
@@ -100,6 +103,19 @@ if(!client) return null;
   
   return (
     <>
+         <div className='relative'>
+
+                 <div
+  className="bg-[#0B0B0F] h-[300px]"
+  style={{
+    backgroundImage: `url(${bgImageTop})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'left center' // ✅ positions image on right side, vertically centered
+  }}
+>
+  
+</div>
 <div className="h-screen w-full flex justify-center items-center flex-col gap-6 bg-[#0B0B0F]">
 
 
@@ -138,7 +154,7 @@ if(!client) return null;
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel className="text-white font-normal">Email</FormLabel>
               <FormControl>
           <Input
   placeholder="Enter email"
@@ -164,7 +180,7 @@ if(!client) return null;
           name="otpNumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel className="text-white font-normal">OTP Code</FormLabel>
               <FormControl>
           <Input
   placeholder="Enter OPT Code"
@@ -199,6 +215,19 @@ if(!client) return null;
 </div>
     </div>
     </div>
+         <div
+  className="bg-[#0B0B0F] h-[200px]"
+  style={{
+    backgroundImage: `url(${bgImageBottom})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right center' // ✅ positions image on right side, vertically centered
+  }}
+>
+  
+</div>
+
+</div>
 
     </>
   );
