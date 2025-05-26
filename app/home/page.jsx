@@ -10,16 +10,16 @@ async function page() {
   return (
     <>
 
-<div className='w-full mx-auto border-gray-600 border-2 flex justify-center flex-col items-center'>
+<div className='w-full md:mx-auto  flex justify-center flex-col items-center'>
   
-   <div className='w-full  md:w-[1203px] border-red-500 border'> <HeaderPage /></div> 
-    <div className='w-full md:w-[1203px]  border-green-500 border'><AboutTitle /></div>  
+   <div className='w-full  md:w-[1203px]  '> <HeaderPage /></div> 
+    <div className='w-full md:w-[1203px]  '><AboutTitle /></div>  
 
       {/* <div className='mx-16 w-[1203px]  border-green-500 border'><CustomSlider /></div>
      */}
      {/* <div className='mx-16 w-[1203px]  border-green-500 border'><SemiCircleImages /></div> */}
 {/* <SemiCircleImages /></div> */}
-    <div className='w-full flex flex-col items-center bg-[#0F172A]'><div className='mx-16 w-[1203px]  border-green-500 border'><Footer /></div></div>
+    <div className='w-full flex flex-col items-center bg-[#0F172A]'><div className='mx-16 w-[1203px]  '><Footer /></div></div>
    </div>
     </>
   )

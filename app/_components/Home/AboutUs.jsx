@@ -18,13 +18,13 @@ const imageDate = `${domain}/images/date.jpg`;
 {/* //   For Large Devices */}
 
 <div className='hidden md:block'>
-<div className='flex justify-between mt-2 w-[100%] border-red-500 border mx-0'>
+<div className='flex justify-between mt-0 w-[100%]  mx-0'>
   <h1
-    className="text-[100px] md:text-[200px] xl:text-[25.6rem] lg:text-[18.2rem] border-green-400 border text-transparent bg-clip-text bg-center bg-cover"
+    className="text-[100px] md:text-[200px] xl:text-[25.6rem] overflow-hidden lg:text-[18.2rem]  text-transparent bg-clip-text bg-center bg-cover"
     style={{
       fontFamily: 'Bebas Neue, sans-serif',
       letterSpacing: '0.1',
-      lineHeight: '0.8',
+      lineHeight: '.9',
       backgroundImage: `
         linear-gradient(rgba(5, 55, 174, 0.7), rgba(5, 55, 174, 0.7)),
         url(${imageURL})
@@ -135,7 +135,7 @@ for digital supremacy in Dubai,</p>
 <div className='flex flex-col mx-4 md:hidden mt-2'>
 
 <h1
-    className="text-[100px] border-green-400 border text-transparent bg-clip-text bg-center bg-cover"
+    className="text-[100px]  text-transparent bg-clip-text bg-center bg-cover"
     style={{
       fontFamily: 'Bebas Neue, sans-serif',
       letterSpacing: '0.1',
