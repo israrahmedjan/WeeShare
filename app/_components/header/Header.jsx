@@ -168,7 +168,7 @@ function HeaderPage() {
     </div>
 
     {/* Mobile devices header */}
- <div className="md:hidden bg-[#FCFCFC] text-black py-3 mx-2 border-green-600 border">
+ <div className="md:hidden bg-[#FCFCFC] text-black py-3 mx-2 ">
       {/* Top Row: Logo + Book Button + Toggle */}
       <div className="flex justify-between items-center">
         {/* Logo */}

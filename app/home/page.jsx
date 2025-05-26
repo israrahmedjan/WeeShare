@@ -19,7 +19,7 @@ async function page() {
      */}
      {/* <div className='mx-16 w-[1203px]  border-green-500 border'><SemiCircleImages /></div> */}
 {/* <SemiCircleImages /></div> */}
-    <div className='w-full flex flex-col items-center bg-[#0F172A]'><div className='mx-16 w-[1203px]  '><Footer /></div></div>
+    <div className='w-full flex flex-col items-center bg-[#0F172A]'><div className='mx-4 md:mx-16 md:w-[1203px]  '><Footer /></div></div>
    </div>
     </>
   )

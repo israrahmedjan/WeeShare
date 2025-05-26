@@ -19,11 +19,11 @@ function Footer() {
         <div><Image src={`${LineUrl}`} width={400} height={100} alt='image' /></div>
         <div className='text-base md:text-[35px] flex flex-col items-center mt-3'><span>Contact Us &</span>
           <span>Let’s Build Your Dream Project.</span></div>
-          <button className='text-black bg-white px-5 py-2 font-semibold mt-10 rounded-md'>Contact Us </button>
+          <button className='text-black bg-white md:px-5 py-2 font-semibold mt-10 rounded-md'>Contact Us </button>
         {/* footer links etc */}
-        <div className="w-full  mt-5 text-white grid grid-cols-1 md:grid-cols-4 gap-6 py-6 text-base md:text-[15px]">
+        <div className="w-full mt-5 text-white grid grid-cols-1 md:grid-cols-4 gap-6 py-6 text-base md:text-[15px]">
   {/* Column 1 */}
-  <div className=''>
+  <div className='text-white'>
     <h3 className="text-lg font-semibold mb-2">Links</h3>
     <ul className="space-y-1">
       <li><a href="#" className="hover:underline">Web Development</a></li>
