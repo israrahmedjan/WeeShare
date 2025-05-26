@@ -176,7 +176,7 @@ if(!client) return null;
 
 <Button
   type="submit"
-  className="w-full text-white font-medium py-2 px-6 rounded-md bg-gradient-to-r from-[#933FFE] to-[#18C8FF] hover:opacity-90 transition-all duration-300"
+  className="w-full text-white font-medium py-2 cursor-pointer px-6 rounded-md bg-gradient-to-r from-[#933FFE] to-[#18C8FF] hover:opacity-90 transition-all duration-300"
 >
   Sign Up
 </Button>
