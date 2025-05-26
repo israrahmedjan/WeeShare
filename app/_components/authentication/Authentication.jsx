@@ -30,10 +30,10 @@ function Authentication() {
   
 </div>
 
-            <div className="h-screen w-full flex justify-center items-center flex-col gap-6 bg-[#0B0B0F]">
+            <div className="h-[150px] w-full flex justify-center items-center flex-col gap-1 bg-[#0B0B0F] ">
 
 
-                <div className='w-full flex flex-col items-center max-h-[200px]'>
+                <div className='w-full flex flex-col items-center '>
 
                     <div className='text-white'><Image src={`${domain}/images/logo.svg`} width={150} height={150} alt='logo Image' /> </div>
 

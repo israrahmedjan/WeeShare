@@ -116,7 +116,7 @@ if(!client) return null;
 >
   
 </div>
-<div className="h-screen w-full flex justify-center items-center flex-col gap-6 bg-[#0B0B0F]">
+<div className="h-[150px] w-full flex justify-center items-center flex-col gap-1 bg-[#0B0B0F]">
 
 
                 <div className='w-full flex flex-col items-center'>
