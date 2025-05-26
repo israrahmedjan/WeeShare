@@ -15,7 +15,7 @@ function Footer() {
   return (
     <div className='w-full bg-[#0F172A]'>
 
-      <div className='flex flex-col items-center  text-white pt-10 '>
+      <div className='flex flex-col items-center  text-white'>
         <div><Image src={`${LineUrl}`} width={400} height={100} alt='image' /></div>
         <div className='text-base md:text-[35px] flex flex-col items-center mt-3'><span>Contact Us &</span>
           <span>Let’s Build Your Dream Project.</span></div>
