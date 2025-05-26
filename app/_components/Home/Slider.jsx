@@ -95,9 +95,9 @@ export default function ArcImageSlider() {
   };
 
   return (
-    <div className="relative w-full h-[550px] overflow-hidden">
+    <div className="relative w-full h-[650px] overflow-hidden border-red-800 border">
       {/* Arc Images Layer */}
-      <div className="absolute top-0 left-0 w-full h-full z-10 flex items-center justify-center pointer-events-none">
+      <div className="absolute -top-30 left-0 w-full h-full z-10 flex items-center justify-center pointer-events-none">
         <div className="relative w-full h-[300px]">
           {images.map((img, index) => {
             const offset = index - centerIndex;
@@ -149,7 +149,7 @@ export default function ArcImageSlider() {
       </div>
 
       {/* Text + Controls */}
-      <div className="relative z-20 mt-[360px] flex justify-center items-center gap-10 text-white">
+      <div className="relative z-20 mt-[460px] flex justify-center items-center gap-9  text-white">
         {/* Previous Button */}
         <button
           onClick={handlePrev}
