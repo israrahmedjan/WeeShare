@@ -16,22 +16,41 @@ const imageDate = `${domain}/images/date.jpg`;
     <>
   
 {/* //   Large About Us text Div */}
-    <div className="flex justify-center items-center  md:h-[410px] bg-white mt-0 p-0 overflow-hidden">
-      <h1
-        className="text-[100px] mx-0 px-0 lg:text-[417px] text-transparent bg-clip-text bg-center bg-cover"
-        style={{
-          fontFamily: 'Bebas Neue, sans-serif',
-           letterSpacing: '1px',
-          backgroundImage: `
-            linear-gradient(rgba(5, 55, 174, 0.7), rgba(5, 55, 174, 0.7)),
-            url(${imageURL})
-          `,
-          backgroundSize: '300px 300px',
-        }}
-      >
-        ABOUT US
-      </h1>
-    </div>
+
+<div className='flex justify-between  px-0 w-[100%] border-red-500 border'>
+  <h1
+    className="text-[200px] xl:text-[26.2rem] lg:text-[26.2rem] border-green-400 border text-transparent bg-clip-text bg-center bg-cover"
+    style={{
+      fontFamily: 'Bebas Neue, sans-serif',
+      letterSpacing: '0.1px',
+      lineHeight: '1.2',
+      backgroundImage: `
+        linear-gradient(rgba(5, 55, 174, 0.7), rgba(5, 55, 174, 0.7)),
+        url(${imageURL})
+      `,
+    }}
+  >
+    ABOUT US
+  </h1>
+</div>
+   {/* <div className="flex justify-center items-center md:h-[350px] lg:h-[400px] bg-white  mt-0 p-0 overflow-hidden border-red-500 border">
+  <h1
+    className="text-[200px] lg:text-[480px] border-green-400 border text-transparent bg-clip-text bg-center bg-cover"
+    style={{
+      fontFamily: 'Bebas Neue, sans-serif',
+      letterSpacing: '0.5px',
+      lineHeight: '1.2', // <-- Add this
+      backgroundImage: `
+        linear-gradient(rgba(5, 55, 174, 0.7), rgba(5, 55, 174, 0.7)),
+        url(${imageURL})
+      `,
+      // backgroundSize: 'contain',
+    }}
+  >
+    ABOUT US
+  </h1>
+</div> */}
+
 
 {/* About us text area */}
    <div className="flex justify-between flex-col md:flex-row gap-5"
