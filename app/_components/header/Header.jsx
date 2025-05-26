@@ -45,7 +45,7 @@ function HeaderPage() {
   return (
     <>
     {/* Header for large devices and medium devics */}
-    <div className='text-white  hidden md:block mx-1 z-50 '>
+    <div className='text-white  hidden md:block mx-0 z-50 '>
 
        <div className="w-full bg-white ">
   {/* Top Bar: Logo Left, Text Right */}
@@ -168,7 +168,7 @@ function HeaderPage() {
     </div>
 
     {/* Mobile devices header */}
- <div className=" md:hidden bg-[#FCFCFC] text-black px-4 py-3">
+ <div className="md:hidden bg-[#FCFCFC] text-black py-3 mx-2 border-green-600 border">
       {/* Top Row: Logo + Book Button + Toggle */}
       <div className="flex justify-between items-center">
         {/* Logo */}
