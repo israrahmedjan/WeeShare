@@ -13,45 +13,45 @@ function Footer() {
    
 
   return (
-    <div className='w-full bg-[#0F172A]  '>
+    <div className='w-full bg-[#0F172A]'>
 
-      <div className='flex flex-col items-center mx-16 text-white pt-10'>
+      <div className='flex flex-col items-center mx-16 text-white pt-10 '>
         <div><Image src={`${LineUrl}`} width={400} height={100} alt='image' /></div>
         <div className='text-base md:text-[35px] flex flex-col items-center mt-3'><span>Contact Us &</span>
           <span>Let’s Build Your Dream Project.</span></div>
           <button className='text-black bg-white px-5 py-2 font-semibold mt-10 rounded-md'>Contact Us </button>
         {/* footer links etc */}
-        <div className="w-full  mt-5 text-white grid grid-cols-1 md:grid-cols-4 gap-6 p-6 text-base md:text-[15px]">
+        <div className="w-full  mt-5 text-white grid grid-cols-1 md:grid-cols-4 gap-6 py-6 text-base md:text-[15px]">
   {/* Column 1 */}
-  <div>
-    <h3 className="text-lg font-semibold mb-2">Services</h3>
+  <div className=''>
+    <h3 className="text-lg font-semibold mb-2">Links</h3>
     <ul className="space-y-1">
       <li><a href="#" className="hover:underline">Web Development</a></li>
       <li><a href="#" className="hover:underline">Mobile Apps</a></li>
       <li><a href="#" className="hover:underline">UI/UX Design</a></li>
-      <li><a href="#" className="hover:underline">SEO</a></li>
+      <li><a href="#" className="hover:underline">Contact</a></li>
     </ul>
   </div>
 
   {/* Column 2 */}
   <div>
-    <h3 className="text-lg font-semibold mb-2">Company</h3>
+    <h3 className="text-lg font-semibold mb-2">Services</h3>
     <ul className="space-y-1">
-      <li><a href="#" className="hover:underline">About Us</a></li>
-      <li><a href="#" className="hover:underline">Careers</a></li>
-      <li><a href="#" className="hover:underline">Press</a></li>
-      <li><a href="#" className="hover:underline">Contact</a></li>
+      <li><a href="#" className="hover:underline">Content Marketing</a></li>
+      <li><a href="#" className="hover:underline">UI/UX Designing</a></li>
+      <li><a href="#" className="hover:underline">Custom Software Development</a></li>
+      <li><a href="#" className="hover:underline">PPC Marketing</a></li>
     </ul>
   </div>
 
   {/* Column 3 */}
   <div>
-    <h3 className="text-lg font-semibold mb-2">Support</h3>
+    <h3 className="text-lg font-semibold mb-2">Focus</h3>
     <ul className="space-y-1">
-      <li><a href="#" className="hover:underline">Help Center</a></li>
-      <li><a href="#" className="hover:underline">FAQs</a></li>
-      <li><a href="#" className="hover:underline">Live Chat</a></li>
-      <li><a href="#" className="hover:underline">Community</a></li>
+      <li><a href="#" className="hover:underline">Performance Optimization</a></li>
+      <li><a href="#" className="hover:underline">Responsive Designs</a></li>
+      <li><a href="#" className="hover:underline">Website Maintenance</a></li>
+      <li><a href="#" className="hover:underline">Mobile App Development</a></li>
     </ul>
   </div>
 
@@ -59,10 +59,10 @@ function Footer() {
   <div>
     <h3 className="text-lg font-semibold mb-2">Legal</h3>
     <ul className="space-y-1">
-      <li><a href="#" className="hover:underline">Terms of Use</a></li>
-      <li><a href="#" className="hover:underline">Privacy Policy</a></li>
-      <li><a href="#" className="hover:underline">Cookies</a></li>
-      <li><a href="#" className="hover:underline">Accessibility</a></li>
+      <li><a href="#" className="hover:underline">Market Research & Analysis</a></li>
+      <li><a href="#" className="hover:underline">PriSocial Media Contentvacy Policy</a></li>
+      <li><a href="#" className="hover:underline">Graphic Design</a></li>
+      <li><a href="#" className="hover:underline">E-Commerce</a></li>
     </ul>
   </div>
 </div>
