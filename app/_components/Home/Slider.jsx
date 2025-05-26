@@ -95,7 +95,7 @@ export default function ArcImageSlider() {
   };
 
   return (
-    <div className="relative w-full h-[650px] overflow-hidden border-red-800 border">
+    <div className="relative w-full h-[620px] hidden md:block overflow-hidden ">
       {/* Arc Images Layer */}
       <div className="absolute -top-30 left-0 w-full h-full z-10 flex items-center justify-center pointer-events-none">
         <div className="relative w-full h-[300px]">
@@ -115,10 +115,10 @@ export default function ArcImageSlider() {
                   left: "50%",
                   top: "50%",
                   width: imageSize,
-                  height: 270,
+                  height: 290,
                   borderRadius: "12px",
-                  boxShadow: isCenter ? "0 10px 20px rgba(255,165,0,0.7)" : "none",
-                  border: isCenter ? "3px solid #FFA500" : "2px solid transparent",
+                  boxShadow: isCenter ? "10 10px 20px rgba(255,165,0,0.7)" : "none",
+                  border: isCenter ? "1px solid #FFA500" : "2px solid transparent",
                   translateX: "-50%",
                   translateY: "-50%",
                 }}
@@ -127,6 +127,7 @@ export default function ArcImageSlider() {
                   y,
                   rotate,
                   scale: 1,
+                  opacity: isCenter ? 1 : 0.5, // 👈 Opacity added
                 }}
                 transition={{
                   type: "tween",
@@ -149,7 +150,7 @@ export default function ArcImageSlider() {
       </div>
 
       {/* Text + Controls */}
-      <div className="relative z-20 mt-[460px] flex justify-center items-center gap-9  text-white">
+      <div className="relative z-20 mt-[420px] flex justify-center items-center gap-[20%]  text-white">
         {/* Previous Button */}
         <button
           onClick={handlePrev}
