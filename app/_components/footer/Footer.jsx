@@ -13,7 +13,7 @@ function Footer() {
    
 
   return (
-    <div className='w-full bg-[#0F172A]'>
+    <div className='w-full bg-[#0F172A] reveal'>
 
       <div className='flex flex-col items-center  text-white mt-[10px]'>
         <div><Image src={`${LineUrl}`} width={400} height={100} alt='image' /></div>

@@ -56,7 +56,7 @@ export default function TestimonialsSlider() {
   const visibleTestimonials = testimonials.slice(index, index + ITEMS_PER_PAGE);
 
   return (
-    <div className="max-w-6xl mx-auto py-10 text-center">
+    <div className="max-w-6xl mx-auto py-10 text-center rightMove">
       <h2 className="text-3xl font-bold mb-10 text-white">What Our Clients Say</h2>
 
       <div className="relative min-h-[200px]">

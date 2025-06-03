@@ -5,6 +5,7 @@ import { ChevronDown, ChevronRight,Menu, X  } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
 import LogoutButton from '@/app/logout/logout';
+import { initIntersectionObserver } from '@/public/fadeup';
 
 
 function HeaderPage() {
@@ -41,6 +42,24 @@ function HeaderPage() {
      
     //setHasToken(tokenExists);
   }, []);
+
+// Animation script
+ useEffect(() => {
+    const cleanup = initIntersectionObserver(".rightMove", "active", 0.1);
+
+    return () => {
+      cleanup();
+    };
+  }, []);
+
+   useEffect(() => {
+    const cleanup = initIntersectionObserver(".reveal", "active", 0.1);
+
+    return () => {
+      cleanup();
+    };
+  }, []);
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
