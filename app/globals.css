@@ -120,3 +120,130 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+/* components/HeroSlider.module.css */
+.heroSliderContainer {
+  width: 100%;
+  height: 70vh; /* Aap apni marzi ki height set kar sakte hain */
+  position: relative; /* Arrow aur pagination ko position karne ke liye */
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative; /* Content overlay ke liye */
+  overflow: hidden; /* Agar image thori bari ho */
+}
+
+.slideImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Content ke peeche */
+}
+
+/* Next/Image ke liye extra styling ki zaroorat nahi hoti jab layout="fill" ho */
+
+.slideContent {
+  position: relative; /* Image ke upar lane ke liye */
+  z-index: 2;
+  color: white;
+  padding: 20px;
+  max-width: 700px; /* Content ki width limit karein */
+  background-color: rgba(0, 0, 0, 0.4); /* Text readability ke liye halka background */
+  border-radius: 8px;
+}
+
+.slideContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.slideContent p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.slideButton {
+  background-color: #0070f3; /* Example button color */
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.slideButton:hover {
+  background-color: #005bb5;
+}
+
+/* Swiper Navigation & Pagination Customization (Optional) */
+/* Aap Swiper ke default styles ko override kar sakte hain */
+/* Yeh global CSS mein daalna behtar hoga ya :global selector ka istemal karein */
+
+/* Example: Agar aapko arrows ka color change karna hai */
+/* In global.css or using :global() in module.css */
+/*
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: #ffffff !important; 
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background-color: #0070f3 !important;
+}
+*/
+
+/* Media Queries for responsiveness */
+
+
+/* styles/globals.css (ya kisi bhi CSS file mein) */
+/* Add this to your existing global CSS */
+/* styles.css ya global.css */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);  /* neeche se start karega */
+  transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  /* background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,1)); */
+  /* box-shadow: 2px 2px 5px red, -2px -2px 5px blue; */
+
+
+}
+
+
+.leftMove {
+  opacity: 0;
+  transform: translateX(40px);  /* neeche se start karega */
+  transition: all 0.6s ease-out;
+  
+}
+
+.leftMove.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.rightMove {
+  opacity: 0;
+  transform: translateX(-40px);  /* neeche se start karega */
+  transition: all 0.6s ease-out;
+}
+
+.rightMove.active {
+  opacity: 1;
+  transform: translateX(0);
+}

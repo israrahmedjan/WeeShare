@@ -1,180 +1,98 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
+'use client';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
-export default function ArcImageSlider() {
-  const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN || "";
+const testimonials = [
+  {
+    name: 'Ali Khan',
+    role: 'CEO, ABC Ltd.',
+    message: 'Israr did an amazing job with our website. Highly recommended!',
+  },
+  {
+    name: 'Sara Ahmed',
+    role: 'Manager, XYZ Corp.',
+    message: 'The design and speed are top-notch. Great work!',
+  },
+  {
+    name: 'John Doe',
+    role: 'Freelancer',
+    message: 'Very professional and easy to work with. Will hire again!',
+  },
+  {
+    name: 'Ayesha Malik',
+    role: 'CTO, FutureTech',
+    message: 'Clean code and fast delivery. Loved working with him.',
+  },
+  {
+    name: 'Bilal Khan',
+    role: 'Founder, StartupX',
+    message: 'Exceptional attention to detail and great design sense.',
+  },
+  {
+    name: 'Mehwish Rehman',
+    role: 'Marketing Head, Brandify',
+    message: 'Superb communication and output. Highly impressed!',
+  },
+];
 
-  const imagesData = [
-    {
-      image: `${domain}/images/1.png`,
-      title: `2 - Message from the Captain of the Starship`,
-      description1: `Led by our visionary founder, Simo Berrada, with over 25 years of cosmic experience in the UAE market...`,
-      description2: `Thank you for considering SMB DigitalZone for your digital odyssey...`,
-      description3: `Contact us today to learn more about our services and how we can help you reach your objectives.`,
-    },
-    {
-      image: `${domain}/images/2.png`,
-      title: `3 - Message from the Captain of the Starship`,
-      description1: `Led by our visionary founder, Simo Berrada...`,
-      description2: `Thank you for considering SMB DigitalZone...`,
-      description3: `Contact us today to learn more...`,
-    },
-    {
-      image: `${domain}/images/3.png`,
-      title: `4 - Message from the Captain of the Starship`,
-      description1: `Led by our visionary founder, Simo Berrada...`,
-      description2: `Thank you for considering SMB DigitalZone...`,
-      description3: `Contact us today to learn more...`,
-    },
-    {
-      image: `${domain}/images/4.png`,
-      title: `5 - Message from the Captain of the Starship`,
-      description1: `Led by our visionary founder, Simo Berrada...`,
-      description2: `Thank you for considering SMB DigitalZone...`,
-      description3: `Contact us today to learn more...`,
-    },
-    {
-      image: `${domain}/images/5.png`,
-      title: `6 - Message from the Captain of the Starship`,
-      description1: `Led by our visionary founder, Simo Berrada...`,
-      description2: `Thank you for considering SMB DigitalZone...`,
-      description3: `Contact us today to learn more...`,
-    },
-    {
-      image: `${domain}/images/6.png`,
-      title: `6 - Message from the Captain of the Starship`,
-      description1: `Led by our visionary founder, Simo Berrada...`,
-      description2: `Thank you for considering SMB DigitalZone...`,
-      description3: `Contact us today to learn more...`,
-    },
-    {
-      image: `${domain}/images/7.png`,
-      title: `6 - Message from the Captain of the Starship`,
-      description1: `Led by our visionary founder, Simo Berrada...`,
-      description2: `Thank you for considering SMB DigitalZone...`,
-      description3: `Contact us today to learn more...`,
-    },
-  ];
+export default function TestimonialsSlider() {
+  const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // for animation direction
 
-  const [images, setImages] = useState(imagesData);
-  const [centerIndex] = useState(Math.floor(imagesData.length / 2));
+  const ITEMS_PER_PAGE = 3;
+  const totalSlides = Math.ceil(testimonials.length / ITEMS_PER_PAGE);
 
-  const imageSize = 180;
-  const gap = 220;
-  const arcHeight = -150;
-
-  const handlePrev = () => {
-    const first = images[0];
-    setImages([...images.slice(1), first]);
+  const prevSlide = () => {
+    setDirection(-1);
+    setIndex((prev) => (prev === 0 ? (totalSlides - 1) * ITEMS_PER_PAGE : prev - ITEMS_PER_PAGE));
   };
 
-  const handleNext = () => {
-    const last = images[images.length - 1];
-    setImages([last, ...images.slice(0, images.length - 1)]);
+  const nextSlide = () => {
+    setDirection(1);
+    setIndex((prev) => (prev + ITEMS_PER_PAGE) % testimonials.length);
   };
 
-  const handleImageClick = (index) => {
-    if (index === centerIndex) return;
-    let newImages = [...images];
-    const shiftCount = index - centerIndex;
-
-    if (shiftCount > 0) {
-      for (let i = 0; i < shiftCount; i++) {
-        const last = newImages.pop();
-        newImages.unshift(last);
-      }
-    } else {
-      for (let i = 0; i < Math.abs(shiftCount); i++) {
-        const first = newImages.shift();
-        newImages.push(first);
-      }
-    }
-    setImages(newImages);
-  };
+  const visibleTestimonials = testimonials.slice(index, index + ITEMS_PER_PAGE);
 
   return (
-    <div className="relative w-full h-[620px] hidden md:block overflow-hidden ">
-      {/* Arc Images Layer */}
-      <div className="absolute -top-30 left-0 w-full h-full z-10 flex items-center justify-center pointer-events-none">
-        <div className="relative w-full h-[300px]">
-          {images.map((img, index) => {
-            const offset = index - centerIndex;
-            const x = offset * gap;
-            const y = -Math.pow(offset, 2) * (arcHeight / Math.pow(centerIndex, 2));
-            const rotate = offset * 6;
-            const isCenter = index === centerIndex;
+    <div className="max-w-6xl mx-auto py-10 text-center">
+      <h2 className="text-3xl font-bold mb-10 text-white">What Our Clients Say</h2>
 
-            return (
-              <motion.div
-                key={img.image + index}
-                className={`absolute ${isCenter ? "z-50" : "z-30"} cursor-pointer pointer-events-auto`}
-                onClick={() => handleImageClick(index)}
-                style={{
-                  left: "50%",
-                  top: "50%",
-                  width: imageSize,
-                  height: 290,
-                  borderRadius: "12px",
-                  boxShadow: isCenter ? "10 10px 20px rgba(255,165,0,0.7)" : "none",
-                  border: isCenter ? "1px solid #FFA500" : "2px solid transparent",
-                  translateX: "-50%",
-                  translateY: "-50%",
-                }}
-                animate={{
-                  x,
-                  y,
-                  rotate,
-                  scale: 1,
-                  opacity: isCenter ? 1 : 0.5, // 👈 Opacity added
-                }}
-                transition={{
-                  type: "tween",
-                  ease: "easeOut",
-                  duration: 1.5,
-                }}
-              >
-                <Image
-                  src={img.image}
-                  alt={img.title}
-                  width={212}
-                  height={270}
-                  className="rounded-xl"
-                  draggable={false}
-                />
-              </motion.div>
-            );
-          })}
-        </div>
+      <div className="relative min-h-[200px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 absolute w-full"
+          >
+            {visibleTestimonials.map((testimonial, i) => (
+              <div key={i} className="bg-white shadow-xl rounded-xl p-6">
+                <p className="text-gray-700 italic mb-4">&quot;{testimonial.message}&quot;</p>
+                <h3 className="text-lg font-semibold">{testimonial.name}</h3>
+                <p className="text-sm text-gray-500">{testimonial.role}</p>
+              </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Text + Controls */}
-      <div className="relative z-20 mt-[420px] flex justify-center items-center gap-[20%]  text-white">
-        {/* Previous Button */}
+      {/* Navigation Arrows Below */}
+      <div className="flex justify-center items-center mt-0 gap-4">
         <button
-          onClick={handlePrev}
-          className="p-2 bg-[#0F172A] rounded hover:bg-gray-700 transition"
-          aria-label="Previous"
+          onClick={prevSlide}
+          className="bg-gray-200 hover:bg-gray-300 p-3 rounded-full"
         >
-          <Image src={`${domain}/images/prev.png`} width={50} height={50} alt="Prev" />
+          <ArrowLeft />
         </button>
-
-        {/* Description */}
-        <div className="max-w-xl text-center">
-          <h2 className="text-2xl font-semibold mb-3">{images[centerIndex].title}</h2>
-          <p className="mb-2">{images[centerIndex].description1}</p>
-          <p className="mb-2">{images[centerIndex].description2}</p>
-          <p>{images[centerIndex].description3}</p>
-        </div>
-
-        {/* Next Button */}
         <button
-          onClick={handleNext}
-          className="p-2 bg-[#0F172A] rounded hover:bg-gray-700 transition"
-          aria-label="Next"
+          onClick={nextSlide}
+          className="bg-gray-200 hover:bg-gray-300 p-3 rounded-full"
         >
-          <Image src={`${domain}/images/Next.png`} width={50} height={50} alt="Next" />
+          <ArrowRight />
         </button>
       </div>
     </div>

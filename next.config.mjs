@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['localhost','wee-share.vercel.app'],
+        domains: ['localhost','wee-share.vercel.app','images.unsplash.com'],
       },
 };
 

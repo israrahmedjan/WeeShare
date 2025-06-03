@@ -1,6 +1,7 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+import { initIntersectionObserver, initIntersectionObserver2 } from '@/public/fadeup';
 
 export default function AboutTitle() {
   const domain = process.env.NEXT_PUBLIC_FRONT_DOMAIN;
@@ -12,6 +13,24 @@ export default function AboutTitle() {
 const gridimage = `${domain}/images/grid.png`;
 const imageDate = `${domain}/images/date.jpg`;
 
+
+
+ useEffect(() => {
+    const cleanup = initIntersectionObserver(".rightMove", "active", 0.1);
+
+    return () => {
+      cleanup();
+    };
+  }, []);
+
+   useEffect(() => {
+    const cleanup = initIntersectionObserver(".reveal", "active", 0.1);
+
+    return () => {
+      cleanup();
+    };
+  }, []);
+
   return (
     <>
   
@@ -20,7 +39,7 @@ const imageDate = `${domain}/images/date.jpg`;
 <div className='hidden md:block'>
 <div className='flex justify-between mt-0 w-[100%]  mx-0'>
   <h1
-    className="text-[100px] md:text-[200px] xl:text-[25.6rem] overflow-hidden lg:text-[18.2rem]  text-transparent bg-clip-text bg-center bg-cover"
+    className="rightMove text-[100px] md:text-[200px] xl:text-[25.6rem] overflow-hidden lg:text-[18.2rem]  text-transparent bg-clip-text bg-center bg-cover"
     style={{
       fontFamily: 'Bebas Neue, sans-serif',
       letterSpacing: '0.1',
@@ -34,43 +53,27 @@ const imageDate = `${domain}/images/date.jpg`;
     ABOUT US
   </h1>
 </div>
-   {/* <div className="flex justify-center items-center md:h-[350px] lg:h-[400px] bg-white  mt-0 p-0 overflow-hidden border-red-500 border">
-  <h1
-    className="text-[200px] lg:text-[480px] border-green-400 border text-transparent bg-clip-text bg-center bg-cover"
-    style={{
-      fontFamily: 'Bebas Neue, sans-serif',
-      letterSpacing: '0.5px',
-      lineHeight: '1.2', // <-- Add this
-      backgroundImage: `
-        linear-gradient(rgba(5, 55, 174, 0.7), rgba(5, 55, 174, 0.7)),
-        url(${imageURL})
-      `,
-      // backgroundSize: 'contain',
-    }}
-  >
-    ABOUT US
-  </h1>
-</div> */}
+
 
 
 {/* About us text area */}
-   <div className="flex justify-between flex-col md:flex-row gap-5"
+   <div className="reveal flex justify-between flex-col md:flex-row gap-5"
    >
   <div className="w-full md:w-[65%] h-[400px]"  
     style={{
     backgroundImage: `url(${gridimage})`,
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
   
   
   }}>
-    <h1 className="text-[25px] font-bold md:text-[48px] text-black mx-0">
-        Welcome to <span className='text-[#FFA500]'>SMB DigitalZone,</span>
+    <h1 className="text-[25px] font-bold md:text-[48px] text-black mx-0 ">
+        Welcome to <span className='text-[#FFA500] '>SMB DigitalZone,</span>
 </h1>
 <div className="flex text-black flex-col md:flex-row">
-  <div className="w-full md:w-[40%]"></div> {/* 25% empty */}
-  <div className="w-full md:w-[60%] flex flex-col p-2">
+  <div className="w-full md:w-[35%]"></div> {/* 25% empty */}
+  <div className="w-full md:w-[65%] flex flex-col p-2">
   <p className='text-base md:text-[32px]'>
     your cosmic command center
 for digital supremacy in Dubai,</p>
@@ -103,8 +106,8 @@ for digital supremacy in Dubai,</p>
 
 {/* About below section */}
 
-            <div className='flex  flex-col md:flex-row h-[333px] justify-between'>
-                <div className=' relative top:0 md:-top-[150px] w-full md:w-[50%] h-[500px] z-20'
+            <div className='flex  flex-col md:flex-row h-[250px] justify-between'>
+                <div className=' relative top:0 md:-top-[250px] w-full md:w-[40%] h-[500px] z-20'
                  style={{ backgroundImage: `url(${imageLeft})`,
        backgroundSize: 'cover',
     backgroundPosition: 'left',
